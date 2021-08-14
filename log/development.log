@@ -1,0 +1,2915 @@
+Started GET "/" for ::1 at 2021-08-13 19:43:46 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sharat/.rvm/gems/ruby-2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sharat/.rvm/gems/ruby-2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 937ms (Views: 39.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (81.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (116.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateContactForms (1)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "contact_forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email" varchar, "message" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "1"]]
+  [1m[35m (119.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-08-13 14:19:52.246170"], ["updated_at", "2021-08-13 14:19:52.246170"]]
+  [1m[35m (120.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (21.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (423.0ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (406.2ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1616476240758205995', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateContactForms (20210813142634)
+  [1m[35m (390.3ms)[0m  [1m[35mCREATE TABLE `contact_forms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `message` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210813142634')[0m
+  [1m[35m (52.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-08-13 14:27:09', '2021-08-13 14:27:09')[0m
+  [1m[35m (37.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('1616476240758205995')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-08-13 20:00:21 +0530
+  [1m[35m (0.7ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.7) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.7) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1616476240758205995', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateContactForms (1)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE `contact_forms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `message` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1616476240758205995')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK('1616476240758205995', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateContactForms (1)
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE `contact_forms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `message` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1616476240758205995')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (544.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (298.0ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1616476240758205995', 0)[0m
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateContactForms (1)
+  [1m[35m (289.2ms)[0m  [1m[35mCREATE TABLE `contact_forms` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `first_name` varchar(255), `last_name` varchar(255), `email` varchar(255), `message` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('1')[0m
+  [1m[35m (53.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-08-13 14:32:45', '2021-08-13 14:32:45')[0m
+  [1m[35m (43.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('1616476240758205995')[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2021-08-13 20:02:56 +0530
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sharat/.rvm/gems/ruby-2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sharat/.rvm/gems/ruby-2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-13 20:06:28 +0530
+  [1m[35m (0.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ContactFormsController):
+  
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.7) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.7) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.7) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-13 20:07:03 +0530
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#index as HTML
+Completed 406 Not Acceptable in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ContactFormController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-13 20:09:43 +0530
+  [1m[35m (0.8ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2330ms (Views: 2328.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:35:06 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact-form.css" for ::1 at 2021-08-14 09:35:06 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/contact-form.css"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 09:36:58 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 68ms (Views: 65.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:39:41 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:43:57 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting =>
+...e=>"width:100%", :placeholder="Your name.." );@output_buffer...
+...                              ^):
+  
+app/views/contact_form/index.html.erb:5: syntax error, unexpected tSTRING_BEG, expecting =>
+Started GET "/" for ::1 at 2021-08-14 09:44:21 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 62ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:44:41 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:44:43 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:49:08 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:53:36 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:14: syntax error, unexpected ':', expecting ')'
+...ceholder=>"Write something.." :style=>"height:200px" );@outp...
+...                              ^):
+  
+app/views/contact_form/index.html.erb:14: syntax error, unexpected ':', expecting ')'
+Started GET "/" for ::1 at 2021-08-14 09:53:53 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 60ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:55:37 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:55:43 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 09:55:54 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:03:15 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:04:07 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:04:53 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:09:19 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:8: syntax error, unexpected keyword_do, expecting ')'
+...-horizontal",:remote => true do @output_buffer.safe_append='
+...                             ^~):
+  
+app/views/contact_form/index.html.erb:8: syntax error, unexpected keyword_do, expecting ')'
+Started GET "/" for ::1 at 2021-08-14 10:11:18 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:70: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/contact_form/index.html.erb:70: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2021-08-14 10:12:14 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:70: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/contact_form/index.html.erb:70: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2021-08-14 10:12:53 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"save_contact", :controller=>"contact_form"}):
+     5: 	</head>
+     6: 	<body>
+     7: 		<div class="container">
+     8: 		  <%= form_tag url_for(:action => "save_contact", :controller => "contact_form"),:class=>"form-horizontal",:remote => true do %>
+     9: 
+    10: 		    <label for="fname">First Name</label>
+    11: 		    <%=text_field_tag "contact[first_name]", "",  :onkeypress=>"return handleEnterOnlyAlphabet(this, event);", :placeholder=>"Your name.." %>
+  
+app/views/contact_form/index.html.erb:8:in `_app_views_contact_form_index_html_erb__3622368930790643307_69989547471860'
+Started GET "/" for ::1 at 2021-08-14 10:14:28 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:15:30 +0530
+  [1m[35m (17.9ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 350ms (Views: 346.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:15:46 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/save_contact"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 10:16:05 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:16:14 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"sharat", "last_name"=>"hegde", "email"=>"jhg@gmail.com", "message"=>"ss"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (70.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`created_at`, `updated_at`) VALUES ('2021-08-14 04:50:38', '2021-08-14 04:50:38')[0m
+  [1m[35m (59.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mContactForm Load (31.5ms)[0m  [1m[34mSELECT  `contact_forms`.* FROM `contact_forms` WHERE `contact_forms`.`id` = 1 LIMIT 1[0m
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('sharat', 'hegde', 'jhg@gmail.com', 'ss', '2021-08-14 04:59:04', '2021-08-14 04:59:04')[0m
+  [1m[35m (102.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mContactForm Load (0.8ms)[0m  [1m[34mSELECT  `contact_forms`.* FROM `contact_forms` ORDER BY `contact_forms`.`id` DESC LIMIT 1[0m
+No template found for ContactFormController#save_contact, rendering head :no_content
+Completed 204 No Content in 937583ms (ActiveRecord: 326.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:32:29 +0530
+  [1m[35m (194.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 727ms (Views: 685.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:32:39 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for ContactFormController#save_contact, rendering head :no_content
+Completed 204 No Content in 194ms (ActiveRecord: 20.2ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:33:00 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"ss", "message"=>"s"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 'ss', 's', '2021-08-14 05:03:00', '2021-08-14 05:03:00')[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for ContactFormController#save_contact, rendering head :no_content
+Completed 204 No Content in 81ms (ActiveRecord: 53.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:34:50 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:34:56 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 's', '', '2021-08-14 05:04:56', '2021-08-14 05:04:56')[0m
+  [1m[35m (194.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for ContactFormController#save_contact, rendering head :no_content
+Completed 204 No Content in 229ms (ActiveRecord: 195.6ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:36:30 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:36:36 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 's', '', '2021-08-14 05:06:36', '2021-08-14 05:06:36')[0m
+  [1m[35m (169.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.1ms)
+Completed 200 OK in 206ms (Views: 17.6ms | ActiveRecord: 170.4ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 10:42:23 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting =>
+...:class=>"form-horizontal",:id="newForm", :remote => true do ...
+...                              ^
+/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+...form-horizontal",:id="newForm", :remote => true do @output_b...
+...                              ^
+/home/sharat/ruby/mirraw_test/user_form/app/views/contact_form/index.html.erb:68: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/contact_form/index.html.erb:8: syntax error, unexpected tSTRING_BEG, expecting =>
+app/views/contact_form/index.html.erb:8: syntax error, unexpected ',', expecting keyword_end
+app/views/contact_form/index.html.erb:68: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/" for ::1 at 2021-08-14 10:42:41 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 288ms (Views: 287.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:42:49 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"ss", "message"=>"s"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 'ss', 's', '2021-08-14 05:12:49', '2021-08-14 05:12:49')[0m
+  [1m[35m (176.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.4ms)
+Completed 200 OK in 194ms (Views: 5.6ms | ActiveRecord: 177.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 10:42:52 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"ss", "message"=>"s"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 'ss', 's', '2021-08-14 05:12:52', '2021-08-14 05:12:52')[0m
+  [1m[35m (66.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 5.5ms | ActiveRecord: 67.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 19:53:44 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 1341ms (Views: 1070.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 19:53:53 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>"s"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (452.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (141.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 's', 's', '2021-08-14 14:23:54', '2021-08-14 14:23:54')[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.7ms)
+Completed 200 OK in 782ms (Views: 15.2ms | ActiveRecord: 680.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 19:55:24 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 19:55:29 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.0ms)
+Completed 200 OK in 60ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 19:56:11 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 19:56:14 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 11.9ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 19:56:32 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 19:56:34 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (240895.6ms)
+Completed 200 OK in 240926ms (Views: 240917.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:00:35 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:00:40 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 57ms (Views: 46.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:00:58 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>"s"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 's', 's', '2021-08-14 14:30:58', '2021-08-14 14:30:58')[0m
+  [1m[35m (48.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 167ms (Views: 109.1ms | ActiveRecord: 49.2ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:01:21 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>"s"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 's', 's', '2021-08-14 14:31:21', '2021-08-14 14:31:21')[0m
+  [1m[35m (61.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 110ms (Views: 38.6ms | ActiveRecord: 61.6ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:03:50 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:03:56 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 78ms (Views: 67.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:04:49 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 131ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:04:54 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"f", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for ContactFormController#save_contact, rendering head :no_content
+Completed 204 No Content in 46ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:05:20 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:05:24 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"f", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.2ms)
+Completed 200 OK in 33ms (Views: 14.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:06:31 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:06:35 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (8.6ms)
+Completed 200 OK in 38ms (Views: 14.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:09:52 +0530
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/controllers/contact_form_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/contact_form_controller.rb:15: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for ::1 at 2021-08-14 20:10:06 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 83ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:10:11 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.7ms)
+Completed 200 OK in 236ms (Views: 14.1ms | ActiveRecord: 155.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:10:59 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:11:03 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:15:39 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:15:44 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"g", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 2.9ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:19:53 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:19:58 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRgJEjF9Z8jjzttM7QxSyKfKBDnLS68C4rMUcR5OskgIUxrvHRjktDZEVH/JirYK134lGwrepaEKTdTdFKs1pA==", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 406 Not Acceptable in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/contact_form_controller.rb:15:in `save_contact'
+Started POST "/save_contact" for ::1 at 2021-08-14 20:20:14 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRgJEjF9Z8jjzttM7QxSyKfKBDnLS68C4rMUcR5OskgIUxrvHRjktDZEVH/JirYK134lGwrepaEKTdTdFKs1pA==", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 41.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/save_contact" for ::1 at 2021-08-14 20:20:18 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/save_contact"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:20:26 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:20:30 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4AHMPAvbJJ8uNd7BnE9yiW+/LPCPm3AcuklE/jTzIOJZSt/BJ76n4/u/UfK4yZZLHwsN0k4Oer9St4RSPhanDg==", "contact"=>{"first_name"=>"b", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 81ms (Views: 74.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/save_contact" for ::1 at 2021-08-14 20:20:50 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/save_contact"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:20:54 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:21:01 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7YlXgWd0/8X9CjAmBphiFCc10hhXjfqjpYkIqUbbw8xUwkR8SxF8uSiAvxUiHobWV4HzOpYY8ABNd8gFTD5EIA==", "contact"=>{"first_name"=>" jh", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 68ms (Views: 50.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:23:44 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:23:50 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WNifU2uKAhJW95M7NKSlY5j783PcOFSmw95PEfnCQBHhk4yuR++BboN9HAgQIkGh6E/SUR2tXgUrII+98yfH/Q==", "contact"=>{"first_name"=>"h", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 104ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:25:37 +0530
+Processing by ContactFormController#index as HTML
+  Rendering contact_form/index.html.erb within layouts/application
+  Rendered contact_form/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:26:49 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:26:54 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p7V4LQ8HHUUL6wBCCMoJsdpXgNDRFQzglXwCENhTImge/mvQI2KeOd5hj3EsTO1zquOh8hCABkN9gsK80ralhA==", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 13.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/save_contact" for ::1 at 2021-08-14 20:27:26 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/save_contact"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:27:29 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:27:30 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:27:33 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sNfCK495kfZus+G/xCFrnQPR/rl+MqMWuZgCGCPVsCIJnNHWoxwSirs5bozgp49fc2Xfm7+nqbVRZsK0KTA3zg==", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', '', '', '', '2021-08-14 14:57:34', '2021-08-14 14:57:34')[0m
+  [1m[35m (111.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 206ms (Views: 40.9ms | ActiveRecord: 127.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:31:47 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 173ms (Views: 170.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:31:56 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uhA54RV231vLFkINTyE/PJ1LOdHYM1uKDCz0VhBYqi4DWyocORNcJx6czT5rp9v+7f8Y8xmmUSnk0jT6Gr0twg==", "contact"=>{"first_name"=>"n", "last_name"=>"n ", "email"=>"n", "message"=>"n"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', 'n ', 'n', 'n', '2021-08-14 15:01:56', '2021-08-14 15:01:56')[0m
+  [1m[35m (86.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 128ms (Views: 27.8ms | ActiveRecord: 91.6ms)
+
+
+Started GET "/save_contact" for ::1 at 2021-08-14 20:32:06 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/save_contact"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:32:10 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 85ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:32:19 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ynrOLvCLx5P06srlSdKZOzIvgsiYGqcgRYjo3V9+XbNzMd3T3O5E7yFgRdZtVH35Qpuj6lmPrYOtdihxVZvaXw==", "contact"=>{"first_name"=>"n", "last_name"=>"n", "email"=>"n", "message"=>"nb"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', 'n', 'n', 'nb', '2021-08-14 15:02:19', '2021-08-14 15:02:19')[0m
+  [1m[35m (63.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 151ms (Views: 49.4ms | ActiveRecord: 66.1ms)
+
+
+Started GET "/save_contact" for ::1 at 2021-08-14 20:32:44 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/save_contact"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:32:48 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:32:53 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dkPGQIJsfy0QV3GguZX+o7hX9PrVq3HHoWjrKuE8DPbPCNW9rgn8UcXd/pOdExphyOPV2BQ+e2RJliuG69mLGg==", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:02:53', '2021-08-14 15:02:53')[0m
+  [1m[35m (139.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 204ms (Views: 55.6ms | ActiveRecord: 141.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:33:42 +0530
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:5:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-08-14 20:35:01 +0530
+  
+ArgumentError (You should not use the `match` method in your router without specifying an HTTP method.
+If you want to expose your action to both GET and POST, add `via: [:get, :post]` option.
+If you want to expose your action to GET, use `get` in the router:
+  Instead of: match "controller#action"
+  Do: get "controller#action"):
+  
+config/routes.rb:5:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-08-14 20:36:05 +0530
+  
+NameError (undefined local variable or method `as_routes' for #<ActionDispatch::Routing::Mapper:0x00007f7fe99ed0c0>
+Did you mean?  add_route):
+  
+config/routes.rb:6:in `block (2 levels) in <top (required)>'
+config/routes.rb:5:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2021-08-14 20:36:14 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"save_contact", :controller=>"contact_form"}):
+     5: 	</head>
+     6: 	<body>
+     7: 		<div class="container">
+     8: 		  <%= form_tag url_for(:action => "save_contact", :controller => "contact_form"),:class=>"form-horizontal", :id=>"newForm" do %>
+     9: 
+    10: 		    <label for="fname">First Name</label>
+    11: 		    <%=text_field_tag "contact[first_name]", "",  :onkeypress=>"return handleEnterOnlyAlphabet(this, event);", :placeholder=>"Your name.." %>
+  
+app/views/contact_form/create_contact.html.erb:8:in `_app_views_contact_form_create_contact_html_erb__3599743570012518500_70093431996340'
+Started GET "/" for ::1 at 2021-08-14 20:36:45 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:36:51 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AmUvY2H0l9EeUjse5bjrce7XLU7PBdHzy7VMRQk70bG7LjyeTZEUrcvYtC3BPg+znmMMbA6Q21AjS4zpA95WXQ==", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:06:51', '2021-08-14 15:06:51')[0m
+  [1m[35m (58.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 163ms (Views: 60.7ms | ActiveRecord: 64.8ms)
+
+
+Started GET "/save_contact" for ::1 at 2021-08-14 20:40:05 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/save_contact"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:40:07 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:40:11 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6ZWo8eQf2OBoq4m/rasGnitNKioxxOhZYUT19+jEyvJQ3rsMyHpbnL0hBoyJLeJcW/kLCPBR4vqJujVb4iFNHg==", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:10:11', '2021-08-14 15:10:11')[0m
+  [1m[35m (58.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 140ms (Views: 48.9ms | ActiveRecord: 59.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:41:09 +0530
+  
+SyntaxError (/home/sharat/ruby/mirraw_test/user_form/app/controllers/contact_form_controller.rb:15: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+      render :create_contact "oo"
+                             ^):
+  
+app/controllers/contact_form_controller.rb:15: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+Started GET "/" for ::1 at 2021-08-14 20:41:30 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:41:34 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rHtS1mBx6RSov7E1y6eDa8wfYtJZoNsbUa6ECg3zpQoVMEErTBRqaH01PgbvIWepvKtD8Jg10bi5UESmBxYi5g==", "contact"=>{"first_name"=>"j", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('j', '', '', '', '2021-08-14 15:11:34', '2021-08-14 15:11:34')[0m
+  [1m[35m (110.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.html.erb within layouts/application
+  Rendered contact_form/save_contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 202ms (Views: 44.6ms | ActiveRecord: 113.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:43:14 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 75ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:43:18 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m6mZi6ZMf0j5yUKNwvp093LK+fmAxZD/uXU4EuEhW6si4op2iin8NCxDzb7mfJA1An7Y20FQmlxRi/i+68TcRw==", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', '', '', '', '2021-08-14 15:13:18', '2021-08-14 15:13:18')[0m
+  [1m[35m (68.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 68.8ms)
+
+
+  
+ActionView::MissingTemplate (Missing partial contact_form/_select_early_checkout_type, application/_select_early_checkout_type with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/sharat/ruby/mirraw_test/user_form/app/views"
+):
+  
+app/controllers/contact_form_controller.rb:15:in `save_contact'
+Started GET "/" for ::1 at 2021-08-14 20:43:44 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:43:47 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BWip4x1f37nyH+1/D7J7wuBsuNOgK8/p8IpCswpkZM+8I7oeMTpcxSeVYkwrNJ8AkNiZ8WG+xUoYdIIfAIHjIw==", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', '', '', '', '2021-08-14 15:13:47', '2021-08-14 15:13:47')[0m
+  [1m[35m (84.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 85.2ms)
+
+
+  
+ActionView::MissingTemplate (Missing partial contact_form/_select_early_checkout_type, application/_select_early_checkout_type with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/sharat/ruby/mirraw_test/user_form/app/views"
+):
+  
+app/controllers/contact_form_controller.rb:15:in `save_contact'
+Started GET "/" for ::1 at 2021-08-14 20:44:27 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:44:31 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yG/f+Y6YImbfl/F/Pr3vP+ie9oAGDIXpSKMse3D0PNFxJMwEov2hGgodfkwaOwv9mCrXoseZj0qgXezXehG7PQ==", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', '', '', '', '2021-08-14 15:14:31', '2021-08-14 15:14:31')[0m
+  [1m[35m (74.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendered contact_form/_select_early_checkout_type.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 2.9ms | ActiveRecord: 76.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:44:49 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"save_contact", :controller=>"contact_form"}):
+     5: 	</head>
+     6: 	<body>
+     7: 		<div class="container">
+     8: 		  <%= form_tag url_for(:action => "save_contact", :controller => "contact_form"),:class=>"form-horizontal", :id=>"newForm" do %>
+     9: 
+    10: 		    <label for="fname">First Name</label>
+    11: 		    <%=text_field_tag "contact[first_name]", "",  :onkeypress=>"return handleEnterOnlyAlphabet(this, event);", :placeholder=>"Your name.." %>
+  
+app/views/contact_form/create_contact.html.erb:8:in `_app_views_contact_form_create_contact_html_erb__3599743570012518500_70093733419140'
+Started GET "/" for ::1 at 2021-08-14 20:47:25 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contact_form/save_contact" for ::1 at 2021-08-14 20:47:29 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TLw+KbedioEULCTnDtAo8nTZFYK6g1l1mDrBifK1YBr19y3Um/gJ/cGmq9QqVswwBG00oHsWU9ZwxAEl+FDn9g==", "contact"=>{"first_name"=>"b", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('b', '', '', '', '2021-08-14 15:17:29', '2021-08-14 15:17:29')[0m
+  [1m[35m (111.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendered contact_form/_select_early_checkout_type.html.erb (0.4ms)
+Completed 200 OK in 152ms (Views: 1.7ms | ActiveRecord: 115.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:48:11 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"save_contact", :controller=>"contact_form"}):
+     5: 	</head>
+     6: 	<body>
+     7: 		<div class="container">
+     8: 		  <%= form_tag url_for(:action => "save_contact", :controller => "contact_form"),:class=>"form-horizontal", :id=>"newForm" do %>
+     9: 
+    10: 		    <label for="fname">First Name</label>
+    11: 		    <%=text_field_tag "contact[first_name]", "",  :onkeypress=>"return handleEnterOnlyAlphabet(this, event);", :placeholder=>"Your name.." %>
+  
+app/views/contact_form/create_contact.html.erb:8:in `_app_views_contact_form_create_contact_html_erb__3599743570012518500_70093767123980'
+Started GET "/" for ::1 at 2021-08-14 20:49:54 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 513ms (Views: 467.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2021-08-14 20:50:01 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:51:26 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:51:30 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AzNihAaju8lXxCVY1zvNBSYyfNjLsXHjNWON0BoW04e6eHF5KsY4tYJOqmvzvSnHVoZd+goke0DdnU18EPNUaw==", "contact"=>{"first_name"=>"m", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('m', '', '', '', '2021-08-14 15:21:30', '2021-08-14 15:21:30')[0m
+  [1m[35m (77.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendered contact_form/_select_early_checkout_type.html.erb (0.3ms)
+Completed 200 OK in 124ms (Views: 1.3ms | ActiveRecord: 83.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:53:14 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 60ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:53:19 +0530
+Processing by ContactFormController#save_contact as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tQIyR3A2EnDemdmLETb0NmyJqqEla7bmeCmTc2iUBU4MSSG6XFORDAsTVrg1sBD0HD2Lg+T+vEWQ11PfYnGCog==", "contact"=>{"first_name"=>" j", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.2ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES (' j', '', '', '', '2021-08-14 15:23:19', '2021-08-14 15:23:19')[0m
+  [1m[35m (97.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 406 Not Acceptable in 147ms (ActiveRecord: 103.3ms)
+
+
+  
+ActionController::UnknownFormat (ContactFormController#save_contact is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.1.7) lib/action_controller/metal/implicit_render.rb:40:in `default_render'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.7) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.7) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.7) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.7) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.7) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.7) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.7) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.7) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.7) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-08-14 20:53:50 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 106ms (Views: 95.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:53:53 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', '', '', '', '2021-08-14 15:23:53', '2021-08-14 15:23:53')[0m
+  [1m[35m (101.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 120ms (Views: 6.1ms | ActiveRecord: 102.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:53:56 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"n", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', '', '', '', '2021-08-14 15:23:56', '2021-08-14 15:23:56')[0m
+  [1m[35m (104.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.3ms)
+Completed 200 OK in 117ms (Views: 3.2ms | ActiveRecord: 105.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:55:40 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 76ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:55:43 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"d", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('d', '', '', '', '2021-08-14 15:25:43', '2021-08-14 15:25:43')[0m
+  [1m[35m (90.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.6ms)
+Completed 200 OK in 123ms (Views: 13.4ms | ActiveRecord: 91.5ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:56:04 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:56:07 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:26:07', '2021-08-14 15:26:07')[0m
+  [1m[35m (81.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.0ms)
+Completed 200 OK in 112ms (Views: 13.4ms | ActiveRecord: 82.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:56:39 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 463ms (Views: 440.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 20:56:46 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.6ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:26:46', '2021-08-14 15:26:46')[0m
+  [1m[35m (99.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (2.8ms)
+Completed 200 OK in 296ms (Views: 72.3ms | ActiveRecord: 111.7ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 20:57:56 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'internal_app.' with type 'application/javascript'
+Checked in these paths: 
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/config
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/images
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/stylesheets
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3683401089913134208_70093699196400'
+Started GET "/" for ::1 at 2021-08-14 20:58:13 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'internal_app.' with type 'application/javascript'
+Checked in these paths: 
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/config
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/images
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/stylesheets
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3683401089913134208_70093700144220'
+Started GET "/" for ::1 at 2021-08-14 20:59:26 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'internal_app.' with type 'application/javascript'
+Checked in these paths: 
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/config
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/images
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/stylesheets
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3683401089913134208_70093768363340'
+Started GET "/" for ::1 at 2021-08-14 20:59:34 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'internal_app.' with type 'application/javascript'
+Checked in these paths: 
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/config
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/images
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/stylesheets
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___3683401089913134208_70093732497320'
+Started GET "/" for ::1 at 2021-08-14 21:01:20 +0530
+  [1m[35m (60.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (18.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 391ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'internal_app.' with type 'application/javascript'
+Checked in these paths: 
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/config
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/images
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/stylesheets
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/node_modules):
+    4:     <title>UserForm</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__810642646255984590_47441247852220'
+Started GET "/" for ::1 at 2021-08-14 21:01:50 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 288ms (Views: 286.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:01:55 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"dd", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('dd', '', '', '', '2021-08-14 15:31:55', '2021-08-14 15:31:55')[0m
+  [1m[35m (108.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.3ms)
+Completed 200 OK in 128ms (Views: 5.0ms | ActiveRecord: 110.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:02:18 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:02:19 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:02:22 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:32:22', '2021-08-14 15:32:22')[0m
+  [1m[35m (72.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.7ms)
+Completed 200 OK in 105ms (Views: 12.7ms | ActiveRecord: 74.2ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:03:20 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:03:35 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:03:39 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:33:39', '2021-08-14 15:33:39')[0m
+  [1m[35m (68.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (131640.3ms)
+Completed 200 OK in 131735ms (Views: 131643.9ms | ActiveRecord: 71.1ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:05:51 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:05:56 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:05:59 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', '', '', '', '2021-08-14 15:35:59', '2021-08-14 15:35:59')[0m
+  [1m[35m (79.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 100ms (Views: 5.5ms | ActiveRecord: 81.4ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:20:09 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:20:12 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:20:16 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (5.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <% if flash[:error].present? %>
+    2: 	<%= alert(flash[:error]) %>
+    3: <% else %>
+    4: 	<%= alert(flash[:notice]) %>
+    5: <% end %>
+  
+app/views/contact_form/save_contact.js.erb:2:in `_app_views_contact_form_save_contact_js_erb__58746615022099454_70114923552460'
+Started POST "/save_contact" for ::1 at 2021-08-14 21:20:18 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (8.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    1: <% if flash[:error].present? %>
+    2: 	<%= alert(flash[:error]) %>
+    3: <% else %>
+    4: 	<%= alert(flash[:notice]) %>
+    5: <% end %>
+  
+app/views/contact_form/save_contact.js.erb:2:in `_app_views_contact_form_save_contact_js_erb__58746615022099454_70114924533440'
+Started GET "/" for ::1 at 2021-08-14 21:20:49 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:20:52 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.6ms)
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:21:07 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:21:35 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:21:39 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:21:41 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (3.1ms)
+Completed 200 OK in 21ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:21:45 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:22:34 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:22:36 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:22:39 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.4ms)
+Completed 200 OK in 15ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:22:53 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:22:56 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.4ms)
+Completed 200 OK in 18ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:23:30 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:23:33 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:23:35 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:27:26 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:27:29 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.6ms)
+Completed 200 OK in 36ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:27:37 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 27ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:28:03 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:28:05 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.3ms)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:28:09 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.6ms)
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:28:12 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (3.7ms)
+Completed 200 OK in 35ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:28:24 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:28:33 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>"s"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 's', 's', '2021-08-14 15:58:33', '2021-08-14 15:58:33')[0m
+  [1m[35m (70.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 5.7ms | ActiveRecord: 72.3ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:29:15 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 21:29:20 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"s", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 's', '', '2021-08-14 15:59:20', '2021-08-14 15:59:20')[0m
+  [1m[35m (104.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (1.2ms)
+Completed 200 OK in 181ms (Views: 13.9ms | ActiveRecord: 105.8ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:31:17 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-08-14 21:33:28 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 21:35:12 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 21:37:57 +0530
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (23.4ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    21: 
+    22: 		    <label for="fname">reCaptcha</label>
+    23: 		    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    24: 		    <%= form_for @foo do |f| %>
+    25: 				  # …
+    26: 				  <%= recaptcha_tags %>
+    27: 				  # …
+  
+app/views/contact_form/create_contact.html.erb:24:in `block in _app_views_contact_form_create_contact_html_erb__258629908781618574_69900328844440'
+app/views/contact_form/create_contact.html.erb:8:in `_app_views_contact_form_create_contact_html_erb__258629908781618574_69900328844440'
+Started GET "/" for 127.0.0.1 at 2021-08-14 21:38:26 +0530
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No site key specified.):
+    21: 
+    22: 		    <label for="fname">reCaptcha</label>
+    23: 		    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    24: 				 <%= recaptcha_tags %>
+    25: 
+    26: 		  	<%= submit_tag "Submit", :class => 'submit' %>
+    27: 			<% end %>
+  
+app/views/contact_form/create_contact.html.erb:24:in `block in _app_views_contact_form_create_contact_html_erb__3905323067850420646_70226848076200'
+app/views/contact_form/create_contact.html.erb:8:in `_app_views_contact_form_create_contact_html_erb__3905323067850420646_70226848076200'
+Started GET "/" for 127.0.0.1 at 2021-08-14 21:41:58 +0530
+  [1m[35m (0.4ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No site key specified.):
+    21: 
+    22: 		    <label for="fname">reCaptcha</label>
+    23: 		    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    24: 				 <%= recaptcha_tags %>
+    25: 
+    26: 		  	<%= submit_tag "Submit", :class => 'submit' %>
+    27: 			<% end %>
+  
+app/views/contact_form/create_contact.html.erb:24:in `block in _app_views_contact_form_create_contact_html_erb___64870861419305012_70005824097780'
+app/views/contact_form/create_contact.html.erb:8:in `_app_views_contact_form_create_contact_html_erb___64870861419305012_70005824097780'
+Started GET "/" for 127.0.0.1 at 2021-08-14 21:57:09 +0530
+  [1m[35m (47.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 695ms (Views: 686.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 21:58:02 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"b", "last_name"=>"", "email"=>"", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 21:58:10 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"b", "last_name"=>"h", "email"=>"gf", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.7ms)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 21:58:51 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 21:58:57 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"n", "last_name"=>"n", "email"=>"n", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (52.2ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('n', 'n', 'n', '', '2021-08-14 16:28:57', '2021-08-14 16:28:57')[0m
+  [1m[35m (139.6ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: b09bab7d-e543-4148-abf9-bcb8450c8ee2) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "n"
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:04:28 +0530
+  [1m[35m (1.2ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 361ms (Views: 355.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 22:04:36 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"g", "last_name"=>"g", "email"=>"g", "message"=>""}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (63.8ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('g', 'g', 'g', '', '2021-08-14 16:34:36', '2021-08-14 16:34:36')[0m
+  [1m[35m (104.6ms)[0m  [1m[35mCOMMIT[0m
+UserMailer#welcome_email: processed outbound mail in 3.8ms
+UserMailer#welcome_email: processed outbound mail in 3.7ms
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 3f9d8dd1-0632-4c70-8163-ea865c065caf) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "g"
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: d5bda587-e21b-4e53-9960-fb6ff94c7bde) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "g"
+[ActiveJob] [ActionMailer::DeliveryJob] [3f9d8dd1-0632-4c70-8163-ea865c065caf] Performing ActionMailer::DeliveryJob (Job ID: 3f9d8dd1-0632-4c70-8163-ea865c065caf) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "g"
+[ActiveJob] [ActionMailer::DeliveryJob] [d5bda587-e21b-4e53-9960-fb6ff94c7bde] Performing ActionMailer::DeliveryJob (Job ID: d5bda587-e21b-4e53-9960-fb6ff94c7bde) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "g"
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.6ms)
+Completed 200 OK in 36822ms (Views: 20.6ms | ActiveRecord: 175.2ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 22:06:20 +0530
+Processing by ContactFormController#save_contact as JS
+[ActiveJob] [ActionMailer::DeliveryJob] [3f9d8dd1-0632-4c70-8163-ea865c065caf] UserMailer#welcome_email: processed outbound mail in 66286.5ms
+[ActiveJob] [ActionMailer::DeliveryJob] [3f9d8dd1-0632-4c70-8163-ea865c065caf] Error performing ActionMailer::DeliveryJob (Job ID: 3f9d8dd1-0632-4c70-8163-ea865c065caf) from Async(mailers) in 66447.55ms: NoMethodError (undefined method `email' for "g":String):
+/home/sharat/ruby/mirraw_test/user_form/app/mailers/user_mailer.rb:8:in `welcome_email'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:23:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:22:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/action_view/rendering.rb:30:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:609:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:608:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:105:in `block in processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `tap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/delivery_job.rb:14:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:33:in `perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:22:in `block in execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:67:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:20:in `execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"b", "last_name"=>"v", "email"=>"sharat0803@gmail.com", "message"=>"vc"}, "firstname"=>"", "commit"=>"Submit"}
+[ActiveJob] [ActionMailer::DeliveryJob] [d5bda587-e21b-4e53-9960-fb6ff94c7bde] UserMailer#welcome_email: processed outbound mail in 1590.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [d5bda587-e21b-4e53-9960-fb6ff94c7bde] Error performing ActionMailer::DeliveryJob (Job ID: d5bda587-e21b-4e53-9960-fb6ff94c7bde) from Async(mailers) in 66455.6ms: NoMethodError (undefined method `email' for "g":String):
+/home/sharat/ruby/mirraw_test/user_form/app/mailers/user_mailer.rb:8:in `welcome_email'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:23:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:22:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/action_view/rendering.rb:30:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:609:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:608:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:105:in `block in processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `tap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/delivery_job.rb:14:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:33:in `perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:22:in `block in execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:67:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:20:in `execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('b', 'v', 'sharat0803@gmail.com', 'vc', '2021-08-14 16:36:20', '2021-08-14 16:36:20')[0m
+  [1m[35m (119.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 1fbdbc7d-ea3a-4a65-92ec-fd22f028f20d) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+[ActiveJob] [ActionMailer::DeliveryJob] [1fbdbc7d-ea3a-4a65-92ec-fd22f028f20d] Performing ActionMailer::DeliveryJob (Job ID: 1fbdbc7d-ea3a-4a65-92ec-fd22f028f20d) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.6ms)
+Completed 200 OK in 3410ms (Views: 581.3ms | ActiveRecord: 120.7ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [1fbdbc7d-ea3a-4a65-92ec-fd22f028f20d] UserMailer#welcome_email: processed outbound mail in 580.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [1fbdbc7d-ea3a-4a65-92ec-fd22f028f20d] Error performing ActionMailer::DeliveryJob (Job ID: 1fbdbc7d-ea3a-4a65-92ec-fd22f028f20d) from Async(mailers) in 580.88ms: NoMethodError (undefined method `email' for "sharat0803@gmail.com":String):
+/home/sharat/ruby/mirraw_test/user_form/app/mailers/user_mailer.rb:8:in `welcome_email'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:23:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:22:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/action_view/rendering.rb:30:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:609:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:608:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:105:in `block in processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `tap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/delivery_job.rb:14:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:33:in `perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:22:in `block in execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:67:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:20:in `execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 22:07:19 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"hhh", "last_name"=>"uuu", "email"=>"sharat0803@gmail.com", "message"=>"v"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('hhh', 'uuu', 'sharat0803@gmail.com', 'v', '2021-08-14 16:37:19', '2021-08-14 16:37:19')[0m
+  [1m[35m (57.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 7f444540-4da2-41ea-ba9a-d278a533e194) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+[ActiveJob] [ActionMailer::DeliveryJob] [7f444540-4da2-41ea-ba9a-d278a533e194] Performing ActionMailer::DeliveryJob (Job ID: 7f444540-4da2-41ea-ba9a-d278a533e194) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (21.6ms)
+Completed 200 OK in 53015ms (Views: 34709.1ms | ActiveRecord: 58.3ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [7f444540-4da2-41ea-ba9a-d278a533e194]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [7f444540-4da2-41ea-ba9a-d278a533e194]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (42.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [7f444540-4da2-41ea-ba9a-d278a533e194] UserMailer#welcome_email: processed outbound mail in 243372.2ms
+[ActiveJob] [ActionMailer::DeliveryJob] [7f444540-4da2-41ea-ba9a-d278a533e194] Error performing ActionMailer::DeliveryJob (Job ID: 7f444540-4da2-41ea-ba9a-d278a533e194) from Async(mailers) in 243372.91ms: NoMethodError (undefined method `email' for "sharat0803@gmail.com":String):
+/home/sharat/ruby/mirraw_test/user_form/app/mailers/user_mailer.rb:8:in `welcome_email'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:186:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:97:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/callbacks.rb:19:in `process_action'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionpack-5.1.7/lib/abstract_controller/base.rb:124:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:23:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/rescuable.rb:22:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/action_view/rendering.rb:30:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:609:in `block in process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/base.rb:608:in `process'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:105:in `block in processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `tap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:104:in `processed_mailer'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/actionmailer-5.1.7/lib/action_mailer/delivery_job.rb:14:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:37:in `block in perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/i18n-1.8.10/lib/i18n.rb:314:in `with_locale'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:24:in `block (4 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `block in instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/notifications.rb:166:in `instrument'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:23:in `block (3 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `block in tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `block in tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:26:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/tagged_logging.rb:69:in `tagged'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:44:in `tag_logger'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/logging.rb:20:in `block (2 levels) in <module:Logging>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:33:in `perform_now'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:22:in `block in execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:108:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:26:in `block (4 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:68:in `block in wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/execution_wrapper.rb:85:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/reloader.rb:67:in `wrap'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/railtie.rb:25:in `block (3 levels) in <class:Railtie>'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `instance_exec'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:117:in `block in run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activesupport-5.1.7/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/execution.rb:20:in `execute'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/activejob-5.1.7/lib/active_job/queue_adapters/async_adapter.rb:68:in `perform'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:363:in `run_task'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `block (3 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `loop'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:335:in `block (2 levels) in create_worker'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `catch'
+/home/sharat/.rvm/gems/ruby-2.5.0/gems/concurrent-ruby-1.1.9/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:11:44 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:12:07 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:12:21 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:12:22 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:12:22 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 22:12:54 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"tt", "last_name"=>"vv", "email"=>"sharat0803@gmail.com", "message"=>"bvv"}, "firstname"=>"", "commit"=>"Submit"}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('tt', 'vv', 'sharat0803@gmail.com', 'bvv', '2021-08-14 16:42:54', '2021-08-14 16:42:54')[0m
+  [1m[35m (106.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb] Performing ActionMailer::DeliveryJob (Job ID: a5cd1a15-ef28-4a9c-be6c-58a60ee117fb) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: a5cd1a15-ef28-4a9c-be6c-58a60ee117fb) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+  Rendering contact_form/save_contact.js.erb
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered contact_form/save_contact.js.erb (1.9ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.3ms)
+Completed 200 OK in 14586ms (Views: 21.3ms | ActiveRecord: 109.1ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb] UserMailer#welcome_email: processed outbound mail in 82661.5ms
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb] Sent mail to sharat0803@gmail.com (38.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb] Date: Sat, 14 Aug 2021 22:14:17 +0530
+From: notifications@example.com
+To: sharat0803@gmail.com
+Message-ID: <6117f2e192d91_2da63f9fb118486432640@go-lnx-sharat.mail>
+Subject: Welcome Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <h1>Thank you for contacting us and have a great day!</h1>
+      
+   </body>
+</html>
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::DeliveryJob] [a5cd1a15-ef28-4a9c-be6c-58a60ee117fb] Performed ActionMailer::DeliveryJob (Job ID: a5cd1a15-ef28-4a9c-be6c-58a60ee117fb) from Async(mailers) in 82702.56ms
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:16:19 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 90ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'internal_app.' with type 'application/javascript'
+Checked in these paths: 
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/config
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/images
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/app/assets/stylesheets
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actioncable-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/actionview-5.1.7/lib/assets/compiled
+  /home/sharat/.rvm/gems/ruby-2.5.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/sharat/ruby/mirraw_test/user_form/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___4301726236285149288_69955053683340'
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:17:34 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 22:17:44 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"x", "last_name"=>"x", "email"=>"sharat0803@gmail.com", "message"=>"xxx"}, "commit"=>"Submit"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('x', 'x', 'sharat0803@gmail.com', 'xxx', '2021-08-14 16:47:44', '2021-08-14 16:47:44')[0m
+  [1m[35m (92.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 162fd54f-c1b6-46b0-8be0-8657f3eb3827) to Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+[ActiveJob] [ActionMailer::DeliveryJob] [162fd54f-c1b6-46b0-8be0-8657f3eb3827] Performing ActionMailer::DeliveryJob (Job ID: 162fd54f-c1b6-46b0-8be0-8657f3eb3827) from Async(mailers) with arguments: "UserMailer", "welcome_email", "deliver_now", "sharat0803@gmail.com"
+[ActiveJob] [ActionMailer::DeliveryJob] [162fd54f-c1b6-46b0-8be0-8657f3eb3827]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::DeliveryJob] [162fd54f-c1b6-46b0-8be0-8657f3eb3827]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.5ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [162fd54f-c1b6-46b0-8be0-8657f3eb3827] UserMailer#welcome_email: processed outbound mail in 11.1ms
+  Rendering contact_form/save_contact.js.erb
+[ActiveJob] [ActionMailer::DeliveryJob] [162fd54f-c1b6-46b0-8be0-8657f3eb3827] Sent mail to sharat0803@gmail.com (10.6ms)
+  Rendered contact_form/save_contact.js.erb (1.6ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [162fd54f-c1b6-46b0-8be0-8657f3eb3827] Date: Sat, 14 Aug 2021 22:17:44 +0530
+From: notifications@example.com
+To: sharat0803@gmail.com
+Message-ID: <6117f3b098ed8_2da63f9fb11848643275c@go-lnx-sharat.mail>
+Subject: Welcome Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <h1>Thank you for contacting us and have a great day!</h1>
+      
+   </body>
+</html>
+  </body>
+</html>
+
+Completed 200 OK in 160ms (Views: 11.2ms | ActiveRecord: 100.0ms)
+
+
+[ActiveJob] [ActionMailer::DeliveryJob] [162fd54f-c1b6-46b0-8be0-8657f3eb3827] Performed ActionMailer::DeliveryJob (Job ID: 162fd54f-c1b6-46b0-8be0-8657f3eb3827) from Async(mailers) in 26.8ms
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:21:26 +0530
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 90ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 22:21:36 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"sharat0803@gmail.com", "message"=>"m,"}, "commit"=>"Submit"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 'sharat0803@gmail.com', 'm,', '2021-08-14 16:51:36', '2021-08-14 16:51:36')[0m
+  [1m[35m (114.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+UserMailer#welcome_email: processed outbound mail in 11.2ms
+Sent mail to sharat0803@gmail.com (2.8ms)
+Date: Sat, 14 Aug 2021 22:21:36 +0530
+From: notifications@example.com
+To: sharat0803@gmail.com
+Message-ID: <6117f498c4076_2da62af9827f8a54328c8@go-lnx-sharat.mail>
+Subject: Welcome Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <h1>Thank you for contacting us and have a great day!</h1>
+      
+   </body>
+</html>
+  </body>
+</html>
+
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.7ms)
+Completed 200 OK in 175ms (Views: 5.3ms | ActiveRecord: 117.4ms)
+
+
+Started GET "/rails/mailers/user_mailer" for ::1 at 2021-08-14 22:26:46 +0530
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer"}
+  Rendering /home/sharat/.rvm/gems/ruby-2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /home/sharat/.rvm/gems/ruby-2.5.0/gems/railties-5.1.7/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 48ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 22:30:24 +0530
+  [1m[35m (0.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 345ms (Views: 337.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for 127.0.0.1 at 2021-08-14 22:30:38 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"sharat0803@gmail.com", "message"=>"m"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 'sharat0803@gmail.com', 'm', '2021-08-14 17:00:38', '2021-08-14 17:00:38')[0m
+  [1m[35m (63.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+UserMailer#welcome_email: processed outbound mail in -276.7ms
+Sent mail to sharat0803@gmail.com (8463.3ms)
+Date: Sat, 14 Aug 2021 22:30:38 +0530
+From: notifications@example.com
+To: sharat0803@gmail.com
+Message-ID: <6117f6b6c9d20_59922b15bb097ea46225@go-lnx-sharat.mail>
+Subject: Welcome Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <h1>Thank you for contacting us and have a great day!</h1>
+      
+   </body>
+</html>
+  </body>
+</html>
+
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.4ms)
+Completed 200 OK in 8484ms (Views: 5.6ms | ActiveRecord: 66.0ms)
+
+
