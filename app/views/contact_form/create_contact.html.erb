@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+		  <%= form_tag url_for(:action => "save_contact", :controller => "contact_form"),:class=>"form-horizontal", :id=>"newForm", :remote => true do %>
+
+		    <label for="fname">First Name</label>
+		    <%=text_field_tag "contact[first_name]", "",  :onkeypress=>"return handleEnterOnlyAlphabet(this, event);", :placeholder=>"Your name.." %>
+
+		    <label for="lname">Last Name</label>
+		    <%=text_field_tag "contact[last_name]", "",  :onkeypress=>"return handleEnterOnlyAlphabet(this, event);", :placeholder=>"Your last name.." %>
+
+		    <label for="fname">Email</label>
+		    <%=text_field_tag "contact[email]", "",  :onblur=>"return ValidateBookingEmail(this, 0);", :placeholder=>"Your email.." %>
+
+		    <label for="subject">Message</label>
+		    <%=text_area_tag "contact[message]", "",  :placeholder=>"Write something..", :style=>"height:200px" %>
+
+		  	<%= submit_tag "Submit", :class => 'submit' %>
+			<% end %>
+		</div>
+	</body>
+</html>
+
+<style type="text/css">
+	input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 5px; /* Add a top margin */
+  margin-bottom: 10px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 25%;
+  width: 50%;
+}
+</style>
