@@ -2913,3 +2913,62 @@ Content-Transfer-Encoding: 7bit
 Completed 200 OK in 8484ms (Views: 5.6ms | ActiveRecord: 66.0ms)
 
 
+Started GET "/" for ::1 at 2021-08-14 23:49:37 +0530
+  [1m[35m (224.6ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ContactFormController#create_contact as HTML
+  Rendering contact_form/create_contact.html.erb within layouts/application
+  Rendered contact_form/create_contact.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 859ms (Views: 839.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/save_contact" for ::1 at 2021-08-14 23:49:51 +0530
+Processing by ContactFormController#save_contact as JS
+  Parameters: {"utf8"=>"✓", "contact"=>{"first_name"=>"s", "last_name"=>"s", "email"=>"sharat0803@gmail.com", "message"=>"d"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (11.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (24.5ms)[0m  [1m[32mINSERT INTO `contact_forms` (`first_name`, `last_name`, `email`, `message`, `created_at`, `updated_at`) VALUES ('s', 's', 'sharat0803@gmail.com', 'd', '2021-08-14 18:19:51', '2021-08-14 18:19:51')[0m
+  [1m[35m (134.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+UserMailer#welcome_email: processed outbound mail in 492.3ms
+Sent mail to sharat0803@gmail.com (59.9ms)
+Date: Sat, 14 Aug 2021 23:49:53 +0530
+From: notifications@example.com
+To: sharat0803@gmail.com
+Message-ID: <611809494b41d_63dd2af40869090c988ed@go-lnx-sharat.mail>
+Subject: Welcome Email
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <h1>Thank you for contacting us and have a great day!</h1>
+      
+   </body>
+</html>
+  </body>
+</html>
+
+  Rendering contact_form/save_contact.js.erb
+  Rendered contact_form/save_contact.js.erb (0.5ms)
+Completed 200 OK in 1512ms (Views: 5.4ms | ActiveRecord: 172.8ms)
+
+
