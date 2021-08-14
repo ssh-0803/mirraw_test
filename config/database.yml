@@ -8,7 +8,6 @@ development:
   database: mirraw_db
   username: root
   password: 
-  socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -16,10 +15,8 @@ development:
 test:
   <<: *default
   database: mirraw_db
-  socket: /var/run/mysqld/mysqld.sock
 
 production:
   <<: *default
   database: mirraw_db
-  socket: /var/run/mysqld/mysqld.sock
 
